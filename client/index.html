@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="/jquery/dist/jquery.min.js"></script>
+	<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+
+	<title>image-downloader</title>
+</head>
+<style>
+.red{
+color:rgb(6, 97, 109);
+font-size: 1rem;
+
+}
+.download{
+height:70px;
+font-size: 1rem;
+}
+</style>
+<body>
+<div class="container">
+
+	<h2>File-downloader</h2>
+
+	<form action="/" name="confirmationForm" method="post" class="col">
+		<textarea id="listofurl" class="form-control "  cols="86"  rows="10" name="listofurl" onpaste="myFunction()" placeholder="example:&#10;https://file-examples-com.github.io/uploads/2017/10/file_example_PNG_500kB.png&#10;https://file-examples-com.github.io/uploads/2017/10/file_example_PNG_1MB.png"></textarea>
+
+	   <input type="submit" value="Download" class="btn btn-primary col-12 download">
+	</form>
+</div>
+</body>
+<script>
+function myFunction(){
+	listofurl.classList.add("font-italic");
+	listofurl.classList.add("red");
+}
+</script>
+</html>
